@@ -53,7 +53,7 @@ class trainedModel:
         
         with torch.no_grad(): 
             # Predict class probability from the original
-            # image and 12 other variants of the same image.
+            # image and 10 other variants of the same image.
             # Note: each of the following vectors has 5 float 
             # values, one for each class.
             score           = self.model(image)                   
@@ -63,12 +63,10 @@ class trainedModel:
             scoreRotated2   = self.model(rotate(image, 5))
             scoreRotated3   = self.model(rotate(image, -8))
             scoreRotated4   = self.model(rotate(image, 8))
-            scoreRotated5   = self.model(rotate(image, -10))
-            scoreRotated6   = self.model(rotate(image, 10))
-            scoreRotated7   = self.model(rotate(image, -12))
-            scoreRotated8   = self.model(rotate(image, 12))
-            scoreRotated9   = self.model(rotate(image, -15))
-            scoreRotated10  = self.model(rotate(image, 15))
+            scoreRotated5   = self.model(rotate(image, -12))
+            scoreRotated6   = self.model(rotate(image, 12))
+            scoreRotated7   = self.model(rotate(image, -15))
+            scoreRotated8  = self.model(rotate(image, 15))
         
         # Take the average of the probability scores predicted
         # from the original image and its variants as the final
@@ -83,10 +81,8 @@ class trainedModel:
                           scoreRotated5 + 
                           scoreRotated6 + 
                           scoreRotated7 + 
-                          scoreRotated8 +
-                          scoreRotated9 +
-                          scoreRotated10)
-        finalScores   = scoresSummed/13
+                          scoreRotated8)
+        finalScores   = scoresSummed/11
         
         # Convert the final probability scores to an 
         # integer indicating the class membership.
