@@ -21,7 +21,7 @@ class fundusDataset(Dataset):
              image (4D tensor)            : batch of images of shape [B,H,W,C]
              mmCategoryOneHot (2D tensor) : one-hot encoded labels of shape [B,num_classes]
         """
-        self.dataDir    = dataDir
+        self.dataDir     = dataDir
         self.dataframe   = dataframe
         self.num_classes = num_classes
         self.device      = "cuda" if torch.cuda.is_available() else "cpu" 

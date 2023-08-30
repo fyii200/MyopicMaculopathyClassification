@@ -218,7 +218,7 @@ class imageSynthesiser:
             if name[0:4] == "mmac":
                 self.BInames.append(name)
         
-        # Random sample a background image name
+        # Randomly sample a background image name
         self.randomBIname = np.random.choice(self.BInames)
         # Randomly sample a lesion image name
         self.randomLesionName = np.random.choice(self.lesionNames)
