@@ -23,7 +23,7 @@ The final model ranked [first](https://codalab.lisn.upsaclay.fr/competitions/124
 %run train --dataDir = *
 
 ```
-#### data/Groundtruths/combinedTrainingLabels.csv
+#### Some info about data/Groundtruths/combinedTrainingLabels.csv
 * csv file with ground truth labels for images from the MMAC dataset (row 1 to 1143), [PALM dataset](https://ieee-dataport.org/documents/palm-pathologic-myopia-challenge) (row 1144 to 2343), synthesised images (row 2344 to 2843). Note that there are 500 synthesised images in the csv file as opposed to the number reported in the manuscript (N=250) because half of the synthesised images were excluded from training (see the "get_combined_df" function in [utils.py](code/utils.py)), as they were created using PALM fundus images as background (only wanted to use synthesised images with MMAC images as background). 
 
 # Inference
