@@ -81,7 +81,7 @@ args = parser.parse_args()
 ###################################### Training setup #######################################
 # Read cleaned dataframe with groundtruth labels
 # for images from both MMAC and PALM challenges.
-combined_df = get_combined_df(args.dataDir)[1:100]
+combined_df = get_combined_df(args.dataDir)
 
 # Initialise a pretrained ResNet-18 model.
 mmNet = ResNet18(num_classes = 5, 
