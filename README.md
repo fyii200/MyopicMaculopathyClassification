@@ -31,7 +31,7 @@ The final model ranked [first](https://codalab.lisn.upsaclay.fr/competitions/124
 # Inference
 The code snippet below demonstrates how to apply the trained model at inference:
 ```
-from model import trainedModel
+from code.model import trainedModel
 import cv2 as cv
 import os
 join = os.path.join
