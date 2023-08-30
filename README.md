@@ -7,6 +7,8 @@ The task was to classify myopic maculopathy (MM) from colour fundus photographs 
 The final model ranked [first](https://codalab.lisn.upsaclay.fr/competitions/12441#results) and [sixth](https://codalab.lisn.upsaclay.fr/competitions/12441#results) in the validation phase and test phase, respectively. The method employed (image synthesis -> regular + mix-up augmentations -> test-time augmentation) is summarised below:
 
 ![plot](fig/method_pipeline.jpg)
+***PS: ResNet-18 diagram courtesy of [Ramzan et al.](https://link.springer.com/article/10.1007/s10916-019-1475-2)***
+
 
 ## Image synthesis pipeline
 * Tutorial demonstrating the image synthesis pipeline can be found [here](code/imageSynthesis.ipynb).
@@ -48,6 +50,9 @@ for name in imageNames:
    preds.append(int(model.predict(image)))
 ```
 
-
+### If you use any part of this work, please cite
+```
+TBC
+```
 
 
