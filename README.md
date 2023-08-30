@@ -8,12 +8,45 @@ The final model ranked [first](https://codalab.lisn.upsaclay.fr/competitions/124
 
 ![plot](fig/method_pipeline.jpg)
 
-# Image synthesis pipeline
-* Tutorial demonstrating the image synthesis pipeline can be found [here](code/imageSynthesis.ipynb)
+## Image synthesis pipeline
+* Tutorial demonstrating the image synthesis pipeline can be found [here](code/imageSynthesis.ipynb).
+
+## Training
+* Train script can be found [here](code/train.py).
+* Quickstart (in Jupyter notebook):
+```
+# Insert path to directory containing images and csv file with ground truth labels (default to "~/data") to
+# the empty space marked by *. Note that the data directory "dataDir" is expected to have a subdirectory with
+# the following relative path "Images/training" (where training images are stored) and another subdirectory
+# "Groundtruths" where the csv file with ground truth labels is found ("combinedTrainingLabels.csv").
+
+%run train --dataDir = *
+
+```
+#### data/Groundtruths/combinedTrainingLabels.csv
+* csv file with ground truth labels for images from the MMAC dataset (row 1 to 1143), [PALM dataset](https://ieee-dataport.org/documents/palm-pathologic-myopia-challenge) (row 1144 to 2343), synthesised images (row 2344 to 2843). Note that there are 500 synthesised images in the csv file as opposed to the number reported in the manuscript (N=250) because half of the synthesised images were excluded from training (see the "get_combined_df" function in [utils.py](code/utils.py)), as they were created using PALM fundus images as background (only wanted to use synthesised images with MMAC images as background). 
 
 # Inference
 The code snippet below demonstrates how to apply the trained model at inference:
+```
+from model import trainedModel
+import cv2 as cv
+import os
+join = os.path.join
 
+rootDir = os.path.dirname(os.getcwd()) 
+model = trainedModel(checkpoint = "bestModel.pth")
+model.load(dir_path = join(rootDir, "weights"))
+
+### Please specify...
+imageNames = [list of image names to be tested]
+dataDir = [path to test image directory]
+
+preds = []
+for name in imageNames:
+   image = cv.imread(join(dataDir, name))
+   preds.append(int(model.predict(image)))
+```
 
 
 
