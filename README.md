@@ -1,3 +1,3 @@
 # Under construction
 
-![plot](./fig/method_pipeline.pdf)
+![plot](fig/method_pipeline.png)
