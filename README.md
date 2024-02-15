@@ -1,6 +1,6 @@
-## Domain knowledge-guided training
+## Background
 
-Code for the work described in "Domain knowledge-guided training of a deep neural network for myopic maculopathy classification", which was carried out as part of the [2023 MICCAI Myopic Maculopathy Analysis Challenge](https://codalab.lisn.upsaclay.fr/competitions/12441). 
+Code for the work described in "A Clinically Guided Approach for Training Deep Neural Networks for Myopic Maculopathy Classification", which was carried out as part of the [2023 MICCAI Myopic Maculopathy Analysis Challenge](https://codalab.lisn.upsaclay.fr/competitions/12441). 
 
 The task was to classify myopic maculopathy (MM) from colour fundus photographs based on the widely adopted META-PM framework, under which MM is categorised into normal (category 0), tessellated fundus (category 1), diffuse chorioretinal atrophy (category 2), patchy chorioretinal atrophy (category 3) and macular atrophy (category 4). Paper to appear in 2023 MICCAI Challenge Proceedings. 
 
@@ -52,7 +52,8 @@ for name in imageNames:
 
 ### If you use any part of this work, please cite
 ```
-TBC
+TBC 
 ```
+To appear in [Volume 14563 of LNCS](https://link.springer.com/book/9783031548567)
 
 
