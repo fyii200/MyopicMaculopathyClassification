@@ -1,4 +1,4 @@
-## Background ([paper](https://link.springer.com/book/9783031548567))
+## Background ([paper](https://link.springer.com/chapter/10.1007/978-3-031-54857-4_8))
 
 Code for the work described in "A Clinically Guided Approach for Training Deep Neural Networks for Myopic Maculopathy Classification", which was carried out as part of the [2023 MICCAI Myopic Maculopathy Analysis Challenge](https://codalab.lisn.upsaclay.fr/competitions/12441). 
 
