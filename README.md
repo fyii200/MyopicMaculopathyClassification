@@ -1,4 +1,4 @@
-## Background
+## Background ([paper](https://link.springer.com/book/9783031548567))
 
 Code for the work described in "A Clinically Guided Approach for Training Deep Neural Networks for Myopic Maculopathy Classification", which was carried out as part of the [2023 MICCAI Myopic Maculopathy Analysis Challenge](https://codalab.lisn.upsaclay.fr/competitions/12441). 
 
@@ -52,8 +52,8 @@ for name in imageNames:
 
 ### If you use any part of this work, please cite
 ```
-TBC 
+Yii, F. (2024). A Clinically Guided Approach for Training Deep Neural Networks for Myopic Maculopathy Classification. In: Sheng, B., Chen, H., Wong, T.Y. (eds) Myopic Maculopathy Analysis. MICCAI 2023. Lecture Notes in Computer Science, vol 14563. Springer, Cham. https://doi.org/10.1007/978-3-031-54857-4_8
 ```
-To appear in [Volume 14563 of LNCS](https://link.springer.com/book/9783031548567)
+
 
 
